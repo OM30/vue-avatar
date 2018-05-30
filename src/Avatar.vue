@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="vue-avatar--wrapper" :style="[style, customStyle]">
-    <span v-if="!this.src">{{ userInitial }}</span>
+    <span v-if="!this.src" :style="customStyleSpan">{{ userInitial }}</span>
   </div>
 </div>
 </template>
@@ -40,6 +40,9 @@ export default {
     lighten: {
       type: Number,
       default: 80
+    },
+    customStyleSpan: {
+      type: String
     }
   },
 
